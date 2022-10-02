@@ -1,0 +1,32 @@
+<ul>
+  <li><a href="#"><i class="fa fa-home"></i></a></li>
+  <li><a href="#"><i class="fa fa-user-circle-o"></i></a></li>
+  <li class="activo"><a href="#"><i class="fa fa-plus-square-o"></i></a></li>
+  <li><a href="#"><i class="fa fa-send-o"></i></a></li>
+  <li><a href="#"><i class="fa fa-gear"></i></a></li>
+  <div id="marcador" ></div>
+</ul>
+<script>
+  let marcador = document.querySelector('#marcador');
+  let list = document.querySelectorAll('ul li');
+
+  function moverIndicador(e){
+    marcador.style.left = e.offsetLeft+'px';
+    marcador.style.width = e.offsetWidth+'px';
+  }
+
+  list.forEach(link =>{
+    link.addEventListener('mousemove', (e) => {
+      moverIndicador(e.target);
+    })
+  })
+
+  function activo(){
+    list.forEach((item) =>
+      item.classList.remove('activo'));
+    this.classList.add('activo');
+  }
+
+  list.forEach((item) =>
+    item.addEventListener('mousemove', activo));
+</script>

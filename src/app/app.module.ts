@@ -6,13 +6,17 @@ import { LandingPageComponent } from './componentes/landing-page/landing-page.co
 import { AppRoutingModule } from './app-routing.module';
 import { BubblesBackgroundComponent } from './componentes/bubbles-background/bubbles-background.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
+import { FooterSocialComponent } from './componentes/footer-social/footer-social.component';
+import { HeaderComponent } from './componentes/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     BubblesBackgroundComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterSocialComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
